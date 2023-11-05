@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="images/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles/vendors/reset.css" />
+        <link rel="stylesheet" href="styles/style.css" />
+        <script src="./scripts/lib/nav-menu.js" defer></script>
+        <script src="./scripts/lib/media-query.js" defer></script>
+        <script src="./scripts/lib/scroll.js" defer></script>
+        <script src="./scripts/main.js" defer></script>
+        <title>FA EXHIBITION</title>
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="header__logo">
+                <img src="images/logo.svg" alt="" />
+            </h1>
+            <div class="header__hamburger"><span></span><span></span><span></span></div>
+            <nav class="header__nav">
+                <ul class="header__ul">
+                    <li class="header__li"><a id="topLink">TOP</a></li>
+                    <li class="header__li"><a id="informationLink">INFORMATION</a></li>
+                    <li class="header__li"><a id="galleryLink">GALLERY</a></li>
+                    <li class="header__li"><a id="accessLink">ACCESS</a></li>
+                    <li class="header__li"><a id="contactLink">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+<div class="main-content">
+
+    <main>
+        <div class="main-visual">
+            <!-- <div class="main-visual__container"> -->
+            <!-- <img src="images/mainvisual1.jpg" alt="">
+<img src="images/mainvisual2.jpg" alt="">
+<img src="images/mainvisual3.jpg" alt=""> -->
+            <div
+                class="main-visual__img left"
+                style="background-image: url(images/mainvisual1.jpg)"
+            ></div>
+            <div
+                class="main-visual__img center"
+                style="background-image: url(images/mainvisual2.jpg)"
+            ></div>
+            <div
+                class="main-visual__img right"
+                style="background-image: url(images/mainvisual3.jpg)"
+            ></div>
+            <!-- </div> -->
+        </div>
+        <h2 class="main-title appear">
+            Hello Flower! <br />
+            FA EXHIBITION 2021
+        </h2>
+        <section class="information appear">
+            <h3 class="section-title">INFORMATION</h3>
+            <div class="information__inner">
+                <p class="information__date">
+                    <span class="information__date--big">2021 JUL 1(THU)-3(SAT) </span> <br />
+                    DAY1 10am-6pm OTHER 10am-5:30pm
+                </p>
+                <p class="information__place">at PARK SIDE HALL</p>
+                <p class="information__date">
+                    2021年7月1日(木)ー3日(土) <br />
+                    Day1 10時〜18時　その他 10時〜17時30分
+                </p>
+            </div>
+        </section>
+        <section class="gallery">
+            <h3 class="section-title appear">GALLERY</h3>
+            <ul class="gallery__inner">
+                <li class="gallery__item appear"><img src="images/flower1.jpg" alt="" /></li>
+                <li class="gallery__item appear"><img src="images/flower2.jpg" alt="" /></li>
+                <li class="gallery__item appear"><img src="images/flower3.jpg" alt="" /></li>
+                <li class="gallery__item appear"><img src="images/flower4.jpg" alt="" /></li>
+                <li class="gallery__item appear"><img src="images/flower5.jpg" alt="" /></li>
+                <li class="gallery__item appear"><img src="images/flower6.jpg" alt="" /></li>
+            </ul>
+        </section>
+        <section class="access">
+            <div class="access__bg-img" style="background-image: url(images/bg.jpg);">
+            </div>
+            <h3 class="section-title">ACCESS</h3>
+            <div class="access__inner">
+                <p class="access__building">PARK SIDE HALL</p>
+                <p class="access__info">
+                    〒152-0035 東京都目黒区自由が丘1-1-1 PARK SIDE HALL <br />
+                    PARK SIDE HALL, 1-1-1 Jiyugaoka, Meguro-ku, Tokyo
+                </p>
+                <p class="access__info">
+                    Tel: 03-1111-1111 <br>
+                     E-mail: info@xxxxxxx.jp
+                </p>
+                <button class="btn filled">GOOGLE MAP</button>
+            </div>
+        </section>
+        <section class="contact">
+            <h3 class="section-title">CONTACT</h3>
+            <div class="contact__inner">
+                <a href="" class="contact__link btn arrow">出店に関するお問い合わせ</a>
+                <a href="" class="contact__link btn arrow">その他のお問い合わせ</a>
+            </div>
+        </section>
+    </main>
+<aside class="side">
+    <a class="side__item btn fade">FOR EXHIBITOR</a>
+    <a class="side__item btn fade">FOR VISITOR</a>
+</aside>
+</div>
+
+        <footer class="footer">
+
+            <p class="footer__text">
+                FA EXHIBITION <br>
+                〒152-0035 東京都目黒区自由が丘1-1-1 PARK SIDE HALL <br>
+                Tel: 03-1111-1111  <br> E-mail: info@xxxxxxx.jp
+            </p>
+            <div class="footer__inner">
+                <ul class="footer__ul__sns">
+                    <div class="footer__li__sns "><a href="">Twitter</a></div>
+                    <div class="footer__li__sns "><a href="">Facebook</a></div>
+                    <div class="footer__li__sns "><a href="">Instagram</a></div>
+                </ul>
+                <ul class="footer__ul__trademark">
+                    <div class="footer__li__trademark">PRIVACY POLICY</div>
+                    <div class="footer__li__trademark"><a href="">&copy; FA EXHIBITION</a></div>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

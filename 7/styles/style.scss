@@ -1,0 +1,184 @@
+@use "parts/common" as *;
+
+$cGray: #d3d3d3;
+
+input[type="text"] {
+    &:focus {
+        outline: none;
+    }
+}
+textarea {
+    &:focus {
+        outline: none;
+    }
+}
+
+.sp {
+    display: block;
+}
+.pc {
+    display: none;
+}
+@include mq(md) {
+    .sp {
+        display: none;
+    }
+    .pc {
+        display: block;
+    }
+}
+
+.contents-wrapper {
+    margin: 0 auto;
+    max-width: 960px;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.section-title {
+    @extend .font-lg;
+}
+
+.btn {
+    background-color: $cBlack;
+    color: $cWhite;
+    font-weight: bold;
+    padding: 15px 90px;
+    border: 1px solid $cBlack;
+    &:hover {
+        background-color: $cWhite;
+        color: $cBlack;
+    }
+}
+
+.header {
+    margin-top: 20px;
+    @include mq(md) {
+        margin: 110px auto;
+    }
+
+    @extend .contents-wrapper;
+    @extend .flex;
+
+    justify-content: space-between;
+    align-items: center;
+    ul {
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .sns-icon {
+            width: 25px;
+        }
+        li {
+            @extend .font-sm;
+            margin-right: 15px;
+            @include mq(md) {
+                margin-right: 30px;
+            }
+            &:hover {
+                opacity: 0.7;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    a {
+        color: $cBlack;
+    }
+}
+
+.main-visual {
+    margin-bottom: 80px;
+    img {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+    }
+}
+
+.contents {
+    @extend .contents-wrapper;
+    section {
+        @extend .mb-lg;
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            @include mq(md) {
+                margin-bottom: 60px;
+            }
+        }
+    }
+}
+
+.about {
+    p {
+        margin-bottom: 30px;
+    }
+}
+
+.works {
+    &__inner {
+        @extend .flex;
+        justify-content: space-between;
+    }
+    &__item {
+        margin-bottom: 30px;
+        flex-basis: 31%;
+    }
+}
+
+.news {
+    &__inner {
+        dl {
+            @extend .flex;
+            padding: 15px 10px;
+            border-top: 1px solid $cGray;
+            &:last-child {
+                border-bottom: 1px solid $cGray;
+            }
+        }
+        dt {
+            flex-basis: 20%;
+        }
+        dd {
+            flex-basis: 80%;
+        }
+    }
+}
+
+.contact {
+    &__container {
+        @extend .flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    &__label {
+        flex-basis: 15%;
+    }
+    &__input {
+        height: 45px;
+        @include mq(md) {
+            flex-basis: 85%;
+        }
+        border: 1px solid $cGray;
+
+        &-message {
+            height: 150px;
+        }
+    }
+    &__submit {
+        text-align: center;
+        padding: 25px 0;
+    }
+}
+
+.footer {
+    padding: 10px 0;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    background-color: $cBlack;
+    color: $cWhite;
+}

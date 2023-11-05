@@ -1,0 +1,171 @@
+@use "parts/common" as *;
+
+$cGray: #3a3a3a;
+$bgGray: #ecebeb;
+$thinGray: #bab7b7;
+
+body {
+    font-size: 0.8rem;
+    font-family: "Raleway", sans-serif;
+}
+a {
+    color: $cGray;
+}
+th {
+    font-weight: normal;
+}
+select {
+    outline: 0;
+}
+// .hr {
+//     border-bottom: thin solid $thinGray;
+// }
+.submit-btn {
+    background-color: $cGray;
+    color: $cWhite;
+    padding: 14px;
+    border: none;
+}
+.contents {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#container {
+    max-width: 1000px;
+    margin: 0 auto;
+    // & > .hr {
+    //     display: none;
+    //     @include mq(md) {
+    //         display: block;
+    //         margin-bottom: 50px;
+    //     }
+    // }
+}
+
+.header {
+    @extend .font-sm;
+    margin-top: 35px;
+
+    @include mq(md) {
+        border-bottom: thin solid $thinGray;
+        margin-bottom: 50px;
+    }
+
+    padding: 0 15px;
+    &__logo {
+        margin: 0 auto 20px auto;
+        width: 110px;
+    }
+    &__nav {
+        @extend .contents;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        overflow-x: scroll;
+    }
+    &__ul {
+        display: flex;
+        margin-right: 25px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__li {
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+.product {
+    margin-bottom: 100px;
+    @extend .contents;
+    @extend .flex;
+    justify-content: space-between;
+    & > div {
+        @include mq(md) {
+            width: 47%;
+        }
+    }
+    &__img {
+        margin-bottom: 15px;
+    }
+    &__desc {
+        padding: 0 15px;
+        // &-hr {
+        //     margin-bottom: 15px;
+        // }
+        &-title {
+            @extend .font-md;
+            font-weight: bold;
+            margin-bottom: 15px;
+            padding: 15px 0;
+            border-top: thin solid $thinGray;
+            border-bottom: thin solid $thinGray;
+        }
+        &-text {
+            @extend .font-sm;
+            color: $cGray;
+            margin-bottom: 30px;
+            line-height: 200%;
+        }
+        &-price {
+            margin-bottom: 20px;
+        }
+    }
+    &__form {
+        &-table {
+            border-collapse: collapse;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 20px;
+            .color,
+            .size {
+                width: 20%;
+            }
+            .select {
+                width: 60%;
+            }
+            td,
+            th {
+                padding: 9px;
+            }
+            td {
+                border-top: 1px solid $thinGray;
+            }
+            .col {
+                border-right: 1px solid $thinGray;
+            }
+            select {
+                border: 1px solid $thinGray;
+                width: 90%;
+            }
+        }
+        .submit-btn {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+    &__size {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+        td,
+        th {
+            border: 1px solid $thinGray;
+            padding: 8px;
+        }
+        th {
+            background-color: $bgGray;
+        }
+        .col {
+            background-color: $bgGray;
+        }
+    }
+}
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 10px;
+}

@@ -1,0 +1,155 @@
+body {
+  font-family: "Crimson Text", serif;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  max-width: 100%;
+}
+
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+
+.flex, .contents .inner {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 767px) {
+  .flex, .contents .inner {
+    flex-direction: row;
+  }
+}
+
+.main-title {
+  font-weight: normal;
+}
+
+.sub-title {
+  font-size: 15px;
+}
+
+.font-sm, .header ul li {
+  font-size: 13px;
+}
+
+.font-lg, .main-title {
+  font-size: 20px;
+}
+@media screen and (min-width: 767px) {
+  .font-lg, .main-title {
+    font-size: 25px;
+  }
+}
+
+.main-visual {
+  margin-bottom: 20px;
+  margin-top: 5vh;
+}
+.main-visual img {
+  height: 50vh;
+  margin: 0 auto;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 767px) {
+  .main-visual img {
+    width: 90vw;
+  }
+}
+
+.header {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+@media screen and (min-width: 767px) {
+  .header {
+    padding: 0;
+    width: 90vw;
+  }
+}
+.header ul {
+  display: flex;
+  align-items: center;
+}
+.header ul .logo {
+  flex-shrink: 1;
+  width: 80px;
+  margin-right: 40px;
+}
+.header ul .logo img {
+  width: 100%;
+}
+.header ul li {
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.contents {
+  padding: 0 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.contents .inner {
+  align-items: center;
+  margin-bottom: 60px;
+}
+.contents .inner img {
+  margin-bottom: 10px;
+  flex-basis: 50%;
+}
+@media screen and (min-width: 767px) {
+  .contents .inner img {
+    width: 50%;
+  }
+}
+.contents .inner .text {
+  flex-basis: 50%;
+}
+@media screen and (min-width: 767px) {
+  .contents .inner .text {
+    width: 50%;
+    padding: 50px;
+  }
+}
+.contents .inner .text .sub-title {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 767px) {
+  .contents #work .inner {
+    flex-direction: row-reverse;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+footer img {
+  display: inline;
+  width: 100px;
+}
+footer p {
+  display: inline;
+  font-size: 12px;
+}

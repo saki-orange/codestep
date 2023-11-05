@@ -1,0 +1,28 @@
+@use "../globals/" as *;
+@use "../parts/common" as *;
+
+.products {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @extend .content-width;
+    &__title {
+        font-size: 14px;
+        padding: 30px 0;
+        font-weight: normal;
+    }
+}
+
+.pagination {
+    margin-bottom: 120px;
+
+    text-align: center;
+    font-size: 14px;
+    & > span {
+        &:first-child {
+            margin-right: 40px;
+        }
+    }
+    a {
+        color: $cBlack;
+    }
+}

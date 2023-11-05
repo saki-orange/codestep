@@ -1,0 +1,24 @@
+@use "../globals" as *;
+@use "./common" as *;
+.footer {
+    @extend .content-width;
+    position: absolute;
+    bottom: 30px;
+    // padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @include mq() {
+        flex-direction: row;
+    }
+    &__ul {
+        margin-bottom: 5px;
+        display: flex;
+    }
+    &__li {
+        margin-right: 30px;
+        & > a {
+            color: $cBlack;
+        }
+    }
+}

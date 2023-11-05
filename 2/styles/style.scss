@@ -1,0 +1,150 @@
+$bgColor: #f4f9ff;
+$cWhite: white;
+$cBlack: black;
+
+body {
+    font-size: 0.9rem;
+}
+th {
+    font-weight: normal;
+    text-align: left;
+}
+hr {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid rgb(173, 173, 173);
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+ol {
+    padding-left: 20px;
+    li {
+        margin-bottom: 20px;
+    }
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+body {
+    background-color: $bgColor;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.contents {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    @media screen and (min-width: 1024px) {
+        padding: 25px 0;
+    }
+}
+.wrapper {
+    margin: 0 10px;
+    @media screen and (min-width: 1024px) {
+        margin: 0;
+    }
+}
+.main-title {
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+header {
+    margin-top: 55px;
+    margin-bottom: 15px;
+
+    h1 {
+        @extend .wrapper;
+        .logo {
+            display: block;
+            width: 170px;
+        }
+    }
+}
+
+main {
+    .main-visual {
+        @extend .wrapper;
+        margin-bottom: 70px;
+    }
+    .index {
+        margin-bottom: 40px;
+        // @extend .wrapper;
+        .contents {
+            margin: 0 auto;
+        }
+
+        // display: flex;
+        // justify-content: center;
+
+        background-color: $cWhite;
+    }
+    .detail {
+        margin-bottom: 40px;
+
+        .contents {
+            // @extend .wrapper;
+            margin: 0 auto;
+        }
+
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        &__img {
+            margin-bottom: 18px;
+            @media screen and (min-width: 1024px) {
+                margin-right: 50px;
+            }
+        }
+
+        &__inner {
+            display: flex;
+            flex-direction: column;
+            @media screen and (min-width: 1024px) {
+                flex-direction: row;
+                justify-content: space-between;
+                & > * {
+                    flex-basis: 50%;
+                }
+            }
+        }
+        &__th {
+            padding-right: 10px;
+            padding-bottom: 0px;
+        }
+        &__link {
+            color: $cBlack;
+            border-bottom: 1px solid $cBlack;
+            &:hover {
+                color: gray;
+                border-bottom: 1px solid gray;
+            }
+        }
+        &__text {
+            & > * {
+                margin-bottom: 18px;
+            }
+        }
+    }
+}
+
+footer {
+    // display: flex;
+    // justify-content: center;
+
+    text-align: left;
+    font-size: 0.6em;
+    p {
+        margin: 0 auto;
+    }
+}

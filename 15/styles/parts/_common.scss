@@ -1,0 +1,59 @@
+@use "../globals" as *;
+
+body {
+    letter-spacing: 0.1em;
+    position: relative;
+    font-size: 16px;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic",
+        "メイリオ", sans-serif;
+    color: $cBlack;
+}
+
+img {
+    max-width: 100%;
+}
+
+.content-width {
+    max-width: $contentMaxWidth;
+    margin: 0 auto;
+    // padding: 0 40px;
+}
+
+.mb-sm {
+    margin-bottom: 16px !important;
+}
+
+.mb-lg {
+    margin-bottom: 80px !important;
+}
+
+.pb-sm {
+    padding-bottom: 16px !important;
+}
+
+.pb-lg {
+    padding-bottom: 80px !important;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+
+    @include mq() {
+        flex-direction: row;
+    }
+}
+
+// font
+.font-sm {
+    font-size: 14px;
+}
+.font-md {
+    font-size: 17px;
+}
+.font-lr {
+    font-size: 17px;
+}
+.font-lg {
+    font-size: 25px;
+}

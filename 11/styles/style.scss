@@ -1,0 +1,240 @@
+@use "parts/common" as *;
+
+body {
+  color: $fontBlack;
+  font-family: "Noto Serif JP", serif;
+  font-size: 16px;
+  background-color: $bgBeige;
+}
+
+.wrapper {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.mainvisual {
+  img {
+    height: 100vh;
+    object-fit: cover;
+    width: 100%;
+  }
+  &-sp {
+    display: block;
+    @include mq(md) {
+      display: none;
+    }
+  }
+  &-pc {
+    display: none;
+    @include mq(md) {
+      display: block;
+    }
+  }
+}
+.header {
+  @extend .mb-lg;
+  position: relative;
+  &__nav {
+    writing-mode: vertical-lr;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    @include mq(md) {
+      top: 60px;
+      right: 80px;
+    }
+  }
+  &__ul {
+    margin-right: 60px;
+  }
+  &__li {
+    margin-right: 25px;
+    a {
+      color: $cWhite;
+    }
+  }
+  &__storelink {
+    writing-mode: vertical-lr;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    @include mq(md) {
+      left: 40px;
+      bottom: 30px;
+    }
+    background-color: #3a3a3a;
+    padding: 8px;
+    a {
+      display: block;
+      border: 1px solid $cWhite;
+      padding: 25px 15px;
+      color: $cWhite;
+    }
+  }
+}
+
+.news {
+  @extend .mb-lg;
+  display: flex;
+  flex-direction: row-reverse;
+
+  &__title {
+    writing-mode: vertical-rl;
+    &-ja {
+      font-size: 28px;
+      @include mq(md) {
+        font-size: 36px;
+      }
+    }
+    &-en {
+      font-size: 14px;
+    }
+  }
+  &__inner {
+    writing-mode: vertical-rl;
+    padding-top: 20px;
+    margin-right: 20px;
+    @include mq(md) {
+      margin-right: 80px;
+      padding-top: 80px;
+    }
+  }
+  &__item {
+    padding: 20px 5px;
+    @include mq(md) {
+      padding: 30px 20px;
+    }
+    border-left: 1px solid $cBlack;
+    &:first-child {
+      border-right: 1px solid $cBlack;
+    }
+    &-time {
+      font-size: 12px;
+    }
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      display: none;
+      @include mq(md) {
+        display: block;
+      }
+    }
+  }
+}
+
+.section {
+  &-title {
+    writing-mode: vertical-rl;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &-ja {
+      @extend .font-lg;
+      margin-bottom: 18px;
+    }
+    &-en {
+      @extend .font-sm;
+      display: none;
+      @include mq(md) {
+        display: block;
+      }
+    }
+  }
+  &-img {
+    position: relative;
+    margin-top: 70px;
+    @include mq(md) {
+      margin-top: 100px;
+      width: 67%;
+    }
+  }
+  &-text {
+    padding: 30px 0;
+    width: 60%;
+    text-align: center;
+    color: $cWhite;
+  }
+}
+
+.create {
+  @extend .mb-lg;
+  display: flex;
+  flex-direction: row-reverse;
+  padding-left: 20px;
+  .section-img {
+    margin-right: 10px;
+  }
+  .section-text {
+    background-color: $bgYellowTra;
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+  }
+}
+
+.science {
+  @extend .mb-lg;
+  display: flex;
+  padding-right: 20px;
+  .section-img {
+    margin-left: 10px;
+  }
+  .section-text {
+    background-color: $bgRedTra;
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+  }
+}
+
+.map {
+  height: 450px;
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.footer {
+  background-color: $cBlack;
+  color: $cWhite;
+  a {
+    color: $cWhite;
+  }
+  &__inner {
+    padding: 40px 20px 0 20px;
+    @include mq(md) {
+      padding: 80px 80px 0 80px;
+    }
+    display: flex;
+    justify-content: space-between;
+  }
+  &__link {
+    writing-mode: vertical-lr;
+    a {
+      padding: 5px 0;
+      &:first-child {
+        border-bottom: 1px solid $cWhite;
+      }
+    }
+  }
+  &__contact {
+    writing-mode: vertical-rl;
+    &-link {
+      margin-right: 25px;
+      padding-top: 0;
+    }
+    &-address {
+      margin-right: 25px;
+    }
+    &-logo {
+      width: 40px;
+    }
+  }
+  &__sitename {
+    @extend .font-sm;
+    text-align: center;
+    padding: 30px 0;
+  }
+}

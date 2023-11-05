@@ -1,0 +1,109 @@
+$cWhite: white;
+$cBlack: black;
+
+$breakpoints: (
+    "md": "screen and (min-width: 600px)",
+) !default;
+
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+body {
+    font-size: 0.9rem;
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+// ol {
+//     padding-left: 20px;
+// }
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+.mb-sm {
+    margin-bottom: 16px !important;
+}
+
+.mb-lg {
+    margin-bottom: 80px !important;
+
+    @include mq(md) {
+        margin-bottom: 120px !important;
+    }
+}
+
+.pb-sm {
+    padding-bottom: 16px !important;
+}
+
+.pb-lg {
+    padding-bottom: 80px !important;
+
+    // @include mq(lg) {
+    //     padding-bottom: 150px !important;
+    // }
+}
+
+// .content-width {
+//     width: 90%;
+//     margin: 0 auto;
+//     max-width: $contentMaxWidth;
+// }
+
+.flex {
+    display: flex;
+    flex-direction: column;
+
+    @include mq(md) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+// font
+.font-sm {
+    font-size: 13px;
+    @include mq(md) {
+        font-size: 14px;
+    }
+}
+.font-md {
+    font-size: 17px;
+
+    // @include mq(lg) {
+    //     font-size: 19px;
+    // }
+}
+.font-lr {
+    font-size: 17px;
+
+    // @include mq(lg) {
+    //     font-size: 23px;
+    // }
+}
+.font-lg {
+    font-size: 25px;
+
+    // @include mq(lg) {
+    //     font-size: 36px;
+    // }
+}
+
+// .main-title {
+//     @extend .font-lg;
+//     // font-weight: 600;
+//     // margin-bottom: 0;
+//     // display: block;
+// }
+
+// .sub-title {
+//     @extend .font-sm;
+//     @extend .mb-sm;
+// }

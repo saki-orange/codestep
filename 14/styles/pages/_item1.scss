@@ -1,0 +1,51 @@
+@use "../globals/" as *;
+@use "../parts/common" as *;
+
+.item {
+    padding: 80px 40px;
+    width: 100%;
+    &__inner {
+        max-width: 800px;
+        @extend .flex;
+    }
+    &__img {
+        & > img {
+            margin-bottom: 30px;
+            width: 400px;
+        }
+        @include mq() {
+            margin-right: 60px;
+            // width: auto;f
+        }
+    }
+    &__desc {
+        @include mq() {
+            width: calc(100% - 400px);
+        }
+    }
+    &__text {
+        line-height: 150%;
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    &__price {
+        font-size: 12px;
+        margin-bottom: 30px;
+    }
+    &__dl {
+        margin-bottom: 90px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__dt {
+        width: 30%;
+        font-weight: normal;
+    }
+    &__dd {
+        width: 70%;
+    }
+    &__link {
+        text-align: center;
+        margin-bottom: 100px;
+    }
+}

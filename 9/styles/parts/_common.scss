@@ -1,0 +1,65 @@
+$cWhite: white;
+$cBlack: black;
+
+$breakpoints: (
+    "md": "screen and (min-width: 896px)",
+) !default;
+
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+// ol {
+//     padding-left: 20px;
+// }
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+.mb-sm {
+    margin-bottom: 16px !important;
+}
+
+.mb-lg {
+    margin-bottom: 80px !important;
+}
+
+.pb-sm {
+    padding-bottom: 16px !important;
+}
+
+.pb-lg {
+    padding-bottom: 80px !important;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+
+    @include mq(md) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+// font
+.font-sm {
+    font-size: 12px;
+}
+.font-md {
+    font-size: 17px;
+}
+.font-lr {
+    font-size: 17px;
+}
+.font-lg {
+    font-size: 25px;
+}

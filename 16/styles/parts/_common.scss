@@ -1,0 +1,56 @@
+@use "../globals" as *;
+
+body {
+    font-size: 14px;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.content-width {
+    max-width: $contentMaxWidth;
+    margin: 0 auto;
+}
+
+.mb-sm {
+    margin-bottom: 16px !important;
+}
+
+.mb-lg {
+    margin-bottom: 80px !important;
+}
+
+.pb-sm {
+    padding-bottom: 16px !important;
+}
+
+.pb-lg {
+    padding-bottom: 80px !important;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+
+    @include mq() {
+        flex-direction: row;
+    }
+}
+a {
+    cursor: pointer;
+}
+// font
+.font-sm {
+    font-size: 14px;
+}
+.font-md {
+    font-size: 17px;
+}
+.font-lr {
+    font-size: 17px;
+}
+.font-lg {
+    font-size: 25px;
+}

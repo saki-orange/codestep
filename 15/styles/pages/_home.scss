@@ -1,0 +1,411 @@
+@use "../parts/common" as *;
+@use "../globals/" as *;
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    @include mq() {
+        font-size: 36px;
+        margin-bottom: 80px;
+    }
+
+    &::after {
+        padding-top: 20px;
+        display: block;
+        margin: 0 auto;
+        content: "";
+        width: 100px;
+        border-bottom: 2px solid $cBlack;
+    }
+}
+
+.slide-animation {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-out;
+    &.inview {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.slide-animation-reverse {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease-out;
+
+    &.inview {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.scale-animation {
+    transform: scale(0);
+    opacity: 0;
+    transition: 0.7s;
+    &.inview {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.logo {
+    margin: 0;
+    position: absolute;
+    z-index: 20;
+    top: 25px;
+    left: 25px;
+    @include mq() {
+        top: 50px;
+        left: 40px;
+    }
+    img {
+        width: 100px;
+    }
+}
+
+.header {
+    position: relative;
+    height: 75px;
+    @include mq() {
+        height: 100px;
+    }
+}
+
+.main-visual {
+    // margin-bottom: 80px;
+    position: relative;
+    @include mq() {
+        margin-bottom: 120px;
+    }
+    &__imgs {
+        position: relative;
+        height: 300px;
+        margin-right: 0;
+        margin-left: auto;
+        @include mq() {
+            height: 720px;
+            width: 70%;
+        }
+    }
+    &__img {
+        height: 100%;
+        width: 100%;
+        text-align: right;
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 0 20px 20px $cWhite inset;
+        }
+        position: absolute;
+        right: 0;
+        opacity: 0;
+        @include animation(
+            $name: kf-change-image,
+            $duration: 15s,
+            $timing-function: linear,
+            $iteration-count: infinite
+        );
+        &:nth-child(1) {
+            animation-delay: 0s;
+        }
+        &:nth-child(2) {
+            animation-delay: 5s;
+        }
+        &:nth-child(3) {
+            animation-delay: 10s;
+        }
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__text {
+        @include mq() {
+            position: absolute;
+            top: 40%;
+            left: 10%;
+        }
+        padding: 0 16px;
+    }
+    &__catch {
+        letter-spacing: 0.1em;
+
+        text-shadow: 0 3px 3px $cWhite;
+        margin-bottom: 30px;
+        line-height: 1.5;
+        font-size: 28px;
+        font-weight: bold;
+        @include mq() {
+            font-size: 46px;
+        }
+    }
+}
+
+@keyframes kf-change-image {
+    0% {
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.reason {
+    padding-top: 80px;
+    &__inner {
+        overflow: hidden;
+        background-color: $cRed;
+        padding: 40px 0;
+        @include mq() {
+            padding: 80px 0;
+        }
+    }
+    &__item {
+        background-color: $cWhite;
+        width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+
+        @include mq() {
+            padding: 50px 0;
+            width: 50%;
+        }
+
+        &:first-child {
+            border-radius: 0 15px 15px 0;
+        }
+
+        &:last-child {
+            margin-top: 40px;
+            margin-right: 0;
+            margin-left: auto;
+            border-radius: 15px 0 0 15px;
+        }
+
+        & > img {
+            height: 60px;
+            margin-right: 30px;
+        }
+    }
+    &__main {
+        color: $cRed;
+        font-size: 24px;
+        font-weight: bold;
+        @include mq() {
+            font-size: 28px;
+        }
+        margin-bottom: 5px;
+    }
+    &__sub {
+        font-size: 18px;
+    }
+}
+
+.voice {
+    padding: 80px 16px;
+    &__inner {
+        @extend .content-width;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        @include mq() {
+            flex-direction: row-reverse;
+            width: 70%;
+            &:nth-child(2) {
+                flex-direction: row;
+                margin-right: 0;
+                margin-left: auto;
+            }
+        }
+    }
+    &__text {
+        line-height: 1.5;
+        padding: 20px 23px;
+        background-color: $cBgSkyBlue;
+        border-radius: 20px;
+        position: relative;
+        margin-bottom: 30px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -15px;
+            border: 15px solid transparent;
+            border-top: 15px solid $cBgSkyBlue;
+        }
+        @include mq() {
+            margin-left: 30px;
+            &::before {
+                top: 50%;
+                left: -30px;
+                border: 15px solid transparent;
+                border-right: 15px solid $cBgSkyBlue;
+                margin-left: 0;
+            }
+            &--middle {
+                margin-right: 30px;
+                &::before {
+                    margin: 0;
+                    left: 100%;
+                    border: 15px solid transparent;
+                    border-left: 15px solid $cBgSkyBlue;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    &__icon {
+        text-align: center;
+        font-size: 12px;
+        & > img {
+            width: 120px;
+            background-color: $cBgGray;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        margin-bottom: 30px;
+    }
+}
+
+.school {
+    padding: 60px 16px;
+    @include animation(
+        $name: kf-move-lower-left,
+        $duration: 10s,
+        $timing-function: linear,
+        $iteration-count: infinite
+    );
+    &__inner {
+        @extend .content-width;
+        @extend .flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item {
+        margin-bottom: 30px;
+        background-color: $cWhite;
+        border-radius: 20px;
+        padding: 30px;
+        @include mq() {
+            padding: 60px;
+            width: 48%;
+        }
+    }
+    &__main-title {
+        text-align: center;
+        font-size: 24px;
+        @include mq() {
+            font-size: 28px;
+        }
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    &__sub-title {
+        text-align: center;
+        font-size: 16px;
+        @include mq() {
+            font-size: 18px;
+        }
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+}
+
+@keyframes kf-move-lower-left {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -700px 700px;
+    }
+}
+
+.application {
+    padding: 80px 16px;
+    @include mq() {
+        padding: 120px 16px;
+    }
+    text-align: center;
+    &__inner {
+        @extend .content-width;
+    }
+    &__main-title {
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 15px;
+        @include mq() {
+            font-size: 28px;
+        }
+    }
+    &__sub-title {
+        margin-bottom: 40px;
+    }
+}
+
+.footer {
+    padding: 0 16px;
+    background-color: $cFooterBg;
+    &__inner {
+        @extend .content-width;
+        padding: 60px 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        margin-bottom: 30px;
+        width: 50%;
+        @include mq() {
+            width: 25%;
+            margin-bottom: 0;
+        }
+    }
+    &__title {
+        margin-bottom: 15px;
+        font-weight: bold;
+        font-size: 15px;
+        @include mq() {
+            font-size: 16px;
+        }
+    }
+    &__ul {
+        padding-left: 15px;
+    }
+    &__li {
+        font-size: 12px;
+        margin-bottom: 10px;
+        @include mq() {
+            font-size: 15px;
+        }
+        & > a {
+            transition: 0.3s;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+    &__trademark {
+        padding-bottom: 20px;
+        font-size: 12px;
+        text-align: center;
+    }
+}

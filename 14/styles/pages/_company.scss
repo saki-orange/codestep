@@ -1,0 +1,43 @@
+@use "../globals" as *;
+@use "../parts/common" as *;
+
+.company {
+    max-width: 600px;
+    padding: 80px 40px;
+    &__dl {
+        @extend .flex;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+    }
+    &__dt {
+        font-weight: normal;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        @include mq() {
+            width: 30%;
+            padding-bottom: 20px;
+            border-bottom: 1px solid $cGlay;
+        }
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+    &__dd {
+        padding-bottom: 20px;
+        border-bottom: 1px solid $cGlay;
+        &:last-child {
+            border-bottom: none;
+        }
+        @include mq() {
+            width: 70%;
+            padding: 20px 0;
+        }
+    }
+    &__map {
+        filter: grayscale(1);
+        & > iframe {
+            height: 300px;
+            width: 100%;
+        }
+    }
+}

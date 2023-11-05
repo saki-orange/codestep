@@ -1,0 +1,237 @@
+body {
+  font-family: Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-size: 0.9rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+
+.mb-lg, .main-visual, .magazine, .fashion {
+  margin-bottom: 80px !important;
+}
+
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+
+.flex, .magazine__inner, .introduce__inner, .footer__inner {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 896px) {
+  .flex, .magazine__inner, .introduce__inner, .footer__inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.font-sm {
+  font-size: 14px;
+}
+
+.font-md {
+  font-size: 17px;
+}
+
+.font-lr, .sub-title {
+  font-size: 20px;
+}
+
+.font-lg, .main-title {
+  font-size: 25px;
+}
+
+.main-title {
+  line-height: normal;
+}
+
+.sub-title {
+  font-weight: bold;
+}
+
+.wrapper, .footer__inner, .introduce__inner, .fashion__text, .magazine {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.btn {
+  background-color: rgba(51, 51, 51, 0);
+  color: black;
+  padding: 10px 40px;
+  border: 1px solid black;
+}
+.btn:hover {
+  opacity: 0.6;
+}
+
+.main-visual {
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-visual .logo img {
+  margin: 0 0 0 auto;
+  padding: 30px;
+}
+
+.magazine__text {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.magazine__text .main-title {
+  margin-bottom: 20px;
+}
+.magazine__inner {
+  justify-content: space-between;
+}
+.magazine__item {
+  display: block;
+  flex-basis: 48%;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.magazine__item:last-child {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 896px) {
+  .magazine__item {
+    margin-bottom: 0;
+  }
+}
+.magazine__item::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.magazine__item-desc {
+  background-color: rgba(51, 51, 51, 0.6901960784);
+  font-weight: bold;
+  color: white;
+  width: 300px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  padding: 10px;
+}
+.magazine__item:hover {
+  opacity: 0.7;
+}
+
+.fashion {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+.fashion__text {
+  padding: 30px 5%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.fashion__text .main-title {
+  margin-bottom: 20px;
+}
+.fashion__text p {
+  margin-bottom: 20px;
+}
+
+.introduce {
+  background-color: #f5f5f5;
+}
+.introduce__inner {
+  justify-content: space-between;
+}
+.introduce__item {
+  margin: 30px 0;
+  flex-basis: 48%;
+}
+@media screen and (min-width: 896px) {
+  .introduce__item {
+    margin: 60px 0;
+  }
+}
+.introduce__text .main-title {
+  text-align: center;
+  margin: 35px;
+}
+.introduce__text p {
+  margin-bottom: 30px;
+}
+.introduce__btn {
+  text-align: center;
+}
+
+.footer__1 {
+  background-color: #333333;
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+@media screen and (min-width: 896px) {
+  .footer__1 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+.footer__inner {
+  justify-content: space-between;
+}
+.footer__item {
+  flex-basis: 33%;
+}
+.footer__logo {
+  margin: 0 auto 30px auto;
+}
+@media screen and (min-width: 896px) {
+  .footer__logo {
+    margin: auto auto auto 0;
+  }
+}
+.footer__text {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 896px) {
+  .footer__text {
+    margin-bottom: 0;
+  }
+}
+.footer__text-title {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+.footer__text li::before {
+  content: "- ";
+}
+.footer__2 {
+  font-size: 12px;
+  text-align: center;
+  padding: 25px 0;
+}

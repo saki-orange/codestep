@@ -1,0 +1,79 @@
+@use "../globals" as *;
+
+body {
+    font-size: 12px;
+    font-family: "Meiyro", sans-serif;
+    min-height: 100vh;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+// ol {
+//     padding-left: 20px;
+// }
+a {
+    text-decoration: none;
+    color: $cBlack;
+    transition: 0.15s linear;
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.content-width {
+    max-width: $contentMaxWidth;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.mb-sm {
+    margin-bottom: 16px !important;
+}
+
+.mb-lg {
+    margin-bottom: 80px !important;
+}
+
+.pb-sm {
+    padding-bottom: 16px !important;
+}
+
+.pb-lg {
+    padding-bottom: 80px !important;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+
+    @include mq() {
+        flex-direction: row;
+    }
+}
+
+// font
+.font-sm {
+    font-size: 14px;
+}
+.font-md {
+    font-size: 17px;
+}
+.font-lr {
+    font-size: 17px;
+}
+.font-lg {
+    font-size: 25px;
+}
+
+.page-title {
+    font-size: 14px;
+    padding: 30px 0;
+    font-weight: normal;
+}

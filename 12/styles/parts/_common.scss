@@ -1,0 +1,73 @@
+$cWhite: white;
+$cBlack: #333333;
+$cOffWhite: #f7f7f7;
+$cGray: #777777;
+
+$breakpoints: (
+  "md": "screen and (min-width: 768px)",
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+body {
+  font-size: 14px;
+  font-family: "Noto Sans", "Noto Sans JP", sans-serif;
+  color: $cBlack;
+}
+
+// ul {
+//   list-style: none;
+//   padding-left: 0;
+// }
+// ol {
+//     padding-left: 20px;
+// }
+// a {
+//   text-decoration: none;
+// }
+img {
+  max-width: 100%;
+}
+
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(md) {
+    flex-direction: row;
+  }
+}
+
+// font
+.font-sm {
+  font-size: 14px;
+}
+.font-md {
+  font-size: 17px;
+}
+.font-lr {
+  font-size: 17px;
+}
+.font-lg {
+  font-size: 25px;
+}

@@ -1,0 +1,83 @@
+@use "parts/common" as *;
+
+.main-title {
+    @extend .font-lg;
+}
+.sub-title {
+    @extend .font-lr;
+    padding-bottom: 5px;
+    border-bottom: 1px solid gray;
+}
+.btn {
+    border: 1px solid $cBlack;
+    background-color: $cWhite;
+    padding: 18px 54px;
+}
+
+.contents {
+    // @extend .mb-lg;
+    @extend .flex;
+    li {
+        border-bottom: 1px dotted gray;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+    .sub-title {
+        margin-bottom: 20px;
+    }
+
+    .main-title {
+        margin-bottom: 20px;
+    }
+    .description {
+        margin-bottom: 40px;
+    }
+
+    &__visual {
+        flex-basis: 50%;
+        height: 700px;
+        overflow: hidden;
+        img {
+            object-fit: cover;
+        }
+    }
+    &__text {
+        margin-bottom: 30px;
+        flex-basis: 50%;
+        padding: 5%;
+        .ingredients {
+            margin-bottom: 40px;
+            li {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+.back-btn {
+    @extend .mb-lg;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    @extend .font-sm;
+    padding: 15px 0;
+    ul {
+        margin-bottom: 15px;
+        li {
+            display: inline-block;
+            margin-right: 15px;
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                color: $cBlack;
+                border-bottom: 1px solid $cBlack;
+            }
+        }
+    }
+    p {
+    }
+}

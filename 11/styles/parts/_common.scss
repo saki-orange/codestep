@@ -1,0 +1,81 @@
+$cWhite: white;
+$cBlack: #000000;
+
+$fontBlack: #141414;
+
+$bgBeige: #e6e2d7;
+$bgRedTra: #952a2699;
+$bgYellowTra: #f9e90699;
+
+$breakpoints: (
+  "md": "screen and (min-width: 769px)",
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+// ol {
+//     padding-left: 20px;
+// }
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+
+// .mb-sm {
+//   margin-bottom: 16px !important;
+// }
+
+.mb-lg {
+  margin-bottom: 80px !important;
+  @include mq(md) {
+    margin-bottom: 180px !important;
+  }
+}
+
+// .pb-sm {
+//   padding-bottom: 16px !important;
+// }
+
+// .pb-lg {
+//   padding-bottom: 80px !important;
+// }
+
+.flex {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+// font
+.font-sm {
+  font-size: 10px;
+  @include mq(md) {
+    font-size: 14px;
+  }
+}
+.font-md {
+  font-size: 14px;
+  @include mq(md) {
+    font-size: 16px;
+  }
+}
+.font-lg {
+  font-size: 24px;
+  @include mq(md) {
+    font-size: 32px;
+  }
+}

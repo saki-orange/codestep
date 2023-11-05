@@ -1,0 +1,113 @@
+$cWhite: white;
+$cBlack: black;
+
+$breakpoints: (
+    "md": "screen and (min-width: 1024px)",
+) !default;
+
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+body {
+    font-size: 0.9rem;
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+ol {
+    padding-left: 0;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+.mb-sm {
+    margin-bottom: 20px !important;
+}
+
+// .mb-md {
+//     margin-bottom: 40px !important;
+// }
+
+.mb-lg {
+    margin-bottom: 60px !important;
+
+    //   @include mq(lg) {
+    //     margin-bottom: 150px !important;
+    //   }
+}
+
+// .plr {
+//     padding-left: 20px;
+//     padding-right: 20px;
+// }
+
+.pb-sm {
+    padding-bottom: 20px !important;
+}
+
+.pb-lg {
+    padding-bottom: 35px !important;
+
+    // @include mq(lg) {
+    //     padding-bottom: 150px !important;
+    // }
+}
+
+// .content-width {
+//     width: 90%;
+//     margin: 0 auto;
+//     max-width: $contentMaxWidth;
+// }
+
+.flex {
+    display: flex;
+    flex-direction: column;
+
+    @include mq(md) {
+        flex-direction: row;
+        // flex-wrap: wrap;
+    }
+}
+
+// font
+.font-sm {
+    font-size: 10px;
+
+    // @include mq(lg) {
+    //     font-size: 16px;
+    // }
+}
+.font-md {
+    font-size: 17px;
+
+    // @include mq(lg) {
+    //     font-size: 19px;
+    // }
+}
+.font-lr {
+    font-size: 19px;
+
+    // @include mq(lg) {
+    //     font-size: 23px;
+    // }
+}
+.font-lg {
+    font-size: 25px;
+
+    // @include mq(lg) {
+    //     font-size: 36px;
+    // }
+}
+
+// .sub-title {
+//     @extend .font-sm;
+//     @extend .mb-sm;
+// }
